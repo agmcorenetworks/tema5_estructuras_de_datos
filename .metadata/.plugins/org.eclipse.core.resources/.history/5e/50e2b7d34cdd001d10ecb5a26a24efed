@@ -1,0 +1,55 @@
+package es.corenetworks.dam.programacion.tema5.estructurasDeDatos.arrays;
+
+import es.corenetworks.dam.programacion.tema5.estructurasDeDatos.utilidades.Utilidades;
+
+public class Ejercicio6 {
+
+	static int[][] inicializaMatriz(int[][] matriz) {
+		for (int i = 0; i < 4; i++) {
+			for (int j = 0 ; j < 4; j++) {
+				matriz[i][j] = Utilidades.numerosAleatoriosEntreCeroYNueve();
+			}
+		}
+		return matriz;
+		
+	}
+	
+	static void imprimeMatrizPorFilas(int[][] matriz) {
+		for (int i = 0; i < matriz.length ; i++) {
+			for (int j = 0 ; j < matriz[i].length ; j++) {
+				System.out.print(matriz[i][j]);
+				System.out.print(" ");
+			}
+			System.out.println("");
+		}
+		
+	}
+	
+	static void imprimeMatrizPorColumnas(int[][] matriz) {
+		for (int i = 0; i < matriz.length ; i++) {
+			for (int j = 0 ; j < matriz[i].length ; j++) {
+				System.out.print(matriz[j][i]);
+				System.out.print(" ");
+			}
+			System.out.println("");
+		}
+		
+	}
+	
+	static void imprimeDiagonal(int[][] matriz) {
+		for (int i = 0; i < matriz.length ; i++) {
+			System.out.println(matriz[i][i]);
+			System.out.println("");
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		int[][] matriz= new int[4][4];
+		matriz = inicializaMatriz(matriz);
+		imprimeMatrizPorFilas(matriz);
+		System.out.println("");
+		imprimeMatrizPorColumnas(matriz);
+	}
+	
+}

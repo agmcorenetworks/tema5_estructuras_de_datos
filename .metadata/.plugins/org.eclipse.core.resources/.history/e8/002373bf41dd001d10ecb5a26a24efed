@@ -1,0 +1,17 @@
+package es.corenetworks.dam.programacion.tema5.estructurasDeDatos.arrays;
+
+import java.util.Scanner;
+
+public class Ejercicio1 {
+	static int[] array = new int[10];
+	
+	static int pideNumero() {
+		System.out.println("Por favor, introduzca un número: ");
+		Scanner sc = new Scanner(System.in);
+		return sc.nextInt();
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+}
